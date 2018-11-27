@@ -1,0 +1,40 @@
+{
+  "name": "<%= package_name %>",
+  "version": "<%= version %>",
+  "description": "",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.6",
+    "spendesk-collect": "^0.0.1"
+  },
+  "engines": {
+    "node": "8.11.x",
+    "npm": "5.6.x",
+    "yarn": "1.6.x"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.2"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node app",
+    "start:dev": "NODE_ENV=development nodemon -L app",
+    "start:debug": "NODE_ENV=development nodemon --inspect=127.0.0.1:50050 app",
+    "test": "yarn run test:lint && yarn run test:combined",
+    "test:lint": "eslint app",
+    "test:combined": "NODE_ENV=test jest ./tests",
+    "test:unit": "NODE_ENV=test jest ./tests/units",
+    "test:integration": "NODE_ENV=test jest ./tests/integrations"
+  },
+  "main": "app/index.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "private": false
+}

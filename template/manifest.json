@@ -1,0 +1,8 @@
+{
+  "name": "<%= name %>",
+  "version": "<%= version %>",
+  "description": "A description",
+  "logo": "assets/logo.png",
+  "artwork": "assets/artwork.jpg",
+  "settings_schema": []
+}
