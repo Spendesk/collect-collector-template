@@ -1,3 +1,5 @@
+![npm version](https://badge.fury.io/js/spendesk-collector-template.svg)
+
 # Spendesk Collector Template
 
 This is a scaffolding tool for creating and maintaining Spendesk Collectors. It comes with base directory and file structure, default configuration and documentation files templates.
