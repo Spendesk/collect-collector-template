@@ -7,7 +7,7 @@
     "lodash": "^4.17.11",
     "nodemon": "^1.18.6",
     "puppeteer": "^1.10.0",
-    "spendesk-collect": "^0.0.2"
+    "spendesk-collect": "^0.0.3"
   },
   "engines": {
     "node": "8.11.x",
