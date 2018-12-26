@@ -2,5 +2,5 @@
   "name": "<%= name %>",
   "version": "<%= version %>",
   "description": "A description",
-  "settings_schema": []
+  "settingsSchema": []
 }
