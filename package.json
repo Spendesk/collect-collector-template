@@ -1,6 +1,6 @@
 {
   "name": "spendesk-collector-template",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Template to develop Spendesk collectors",
   "dependencies": {
     "child_process": "^1.0.2",
