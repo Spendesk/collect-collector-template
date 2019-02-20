@@ -1,11 +1,7 @@
 const browserUtil = require("../utils/browser");
 const signinUtil = require("../utils/signin");
 
-module.exports = async (req, res) => {
-  res.json({ ok: true });
-
-  const client = req.client;
-  const ship = req.ship;
+module.exports = async (ship, client, captchaSolver) => {
   const browser = await browserUtil();
 
   try {
