@@ -1,29 +1,23 @@
-const Promise = require("bluebird");
+const CollectError = require("spendesk-collect/errors/collect");
 
 module.exports = async (invoices, client) => {
-  try {
-    client.logger.info("sendInvoices.start");
+  client.logger.info("sendInvoices.start");
 
-    await Promise.map(
-      invoices,
-      async invoice => {
-        client.logger.info("sendInvoices.invoice.start");
+  await Promise.map(
+    invoices,
+    async invoice => {
+      client.logger.info("sendInvoices.invoice.start");
 
-        /*
-         * Send invoices
-         */
+      /*
+        * Send invoices
+        */
 
-        client.logger.info("sendInvoices.invoice.success");
-      },
-      {
-        concurrency: 1
-      }
-    );
+      client.logger.info("sendInvoices.invoice.success");
+    },
+    {
+      concurrency: 1
+    }
+  );
 
-    client.logger.info("sendInvoices.success");
-  } catch (e) {
-    client.logger.info("sendInvoices.error", { error: e.message });
-
-    throw new Error("Invoices uploading failed");
-  }
+  client.logger.info("sendInvoices.success");
 };

@@ -2,5 +2,8 @@
   "name": "<%= name %>",
   "version": "<%= version %>",
   "description": "A description",
-  "settingsSchema": []
+  "defaultSettingsStepTag": "default",
+  "settingsSchema": {
+    "default": []
+  }
 }
